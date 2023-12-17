@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>VidToMe: Video Token Merging for Zero-Shot Video Editing</title>
+    <link rel="icon" type="image/x-icon" href="static/images/WIS.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">VidToMe: Video Token Merging for Zero-Shot Video
+                            Editing</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                Xirui Li<sup>1</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://vision.sjtu.edu.cn/" target="_blank">Chao Ma</a><sup>1</sup>,</span>
+                            <span class="author-block">
+                                Xiaokang Yang<sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://faculty.ucmerced.edu/mhyang/" target="_blank">Ming-Hsuan
+                                    Yang</a><sup>2</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup><a href="https://www.sjtu.edu.cn/"
+                                    target="_blank">Shanghai Jiao Tong University</a>,</span>
+                            <span class="author-block"><sup>2</sup><a href="https://www.ucmerced.edu/"
+                                    target="_blank">UC Merced</a></span>
+                        </div>
+
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Arxiv PDF link -->
+                                <span class="link-block">
+                                    <a href='./TokenFlow_Arxiv.pdf' target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Supplementary PDF link -->
+                                <!-- <span class="link-block">
+                      <a href="sm/supp.html" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/omerbt/TokenFlow" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <!-- Hugging Face Demo link with an image icon -->
+                                <!-- <span class="link-block">
+                <a href="https://huggingface.co/spaces/weizmannscience/tokenflow" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="static/images/hf.png" alt="Hugging Face Demo">
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span> -->
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2307.10373" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <video preload="auto" poster="" id="tree" autoplay controls muted loop width="600px" outline="0px">
+                    <!-- Your video -->
+            <source src="videos/teaser.mp4" type="video/mp4">
+    <!-- <source src="final_very_compressed.mp4" -->
+
+    </video>
+    <!-- <h2 class="subtitle has-text-centered"> 
+      </h2> -->
+    </div>
+    </div>
+    </section>
+    <!-- End teaser video -->
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Diffusion models have made significant advances in generating high-quality images, but their
+                            application to video generation has remained challenging due to the complexity of temporal
+                            motion. Zero-shot video editing offers a solution by utilizing pre-trained image diffusion
+                            models to translate source videos into new ones. Nevertheless, existing methods struggle to
+                            maintain strict temporal consistency and efficient memory consumption. In this work, we
+                            propose a novel approach to enhance temporal consistency in generated videos by merging
+                            self-attention tokens across frames. By aligning and compressing temporally redundant tokens
+                            across frames, our method improves temporal coherence and reduces memory consumption in
+                            self-attention computations. The merging strategy matches and aligns tokens according to the
+                            temporal correspondence between frames, facilitating natural temporal consistency in
+                            generated video frames. To manage the complexity of video processing, we divide videos into
+                            chunks and develop intra-chunk local token merging and inter-chunk global token merging,
+                            ensuring both short-term video continuity and long-term content consistency. Our video
+                            editing approach seamlessly extends the advancements in image editing to video editing,
+                            rendering favorable results in temporal consistency over state-of-the-art methods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Paper poster -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-3">Method</h2>
+                        <div class="content has-text-justified">
+
+
+
+                            <div>
+                                <td colspan="3"><img src="pics/pipeline.png" alt="" width="1000" /></td>
+                            </div>
+                            <div class="content has-text-justified">
+                                <p>
+                                    Given an input source video and a text prompt, our proposed VidToMe generate an
+                                    edited video accoding to the prompt using a pretrained text-to-image diffusion
+                                    model. Our idea is to merge similar tokens across multiple frames in self-attention
+                                    modules to achieve temporal consistency in generated videos.
+                                </p>
+                                <p>
+                                    <b>Top: VidToMe pipeline.</b> Starting from DDIM inverted noise latents, we denoise
+                                    the video frames with the diffusion model combining with an existing controlling
+                                    method.
+                                    The video token merging is applied before self-attention blocks.
+                                </p>
+                                <p>
+                                    <b>Bottom: Video Token Merging.</b> Given the self-attention input tokens, we first
+                                    merge tokens intra the video chunk (Local Token Merging). Then a set of global
+                                    tokens is further combined to enable inter-chunk token sharing (Global Token
+                                    Merging). After joint self-attention on the merged token set, the output tokens are
+                                    restored to their original size by reversing the merging process.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+    <!--End paper poster -->
+
+    <!-- Video grid -->
+    <section class="hero is-light">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <h2 class="title is-3">VidToMe Editing Results</h2>
+                        <div class="content has-text-justified" align="center">
+                            <!-- <td colspan="3">
+                                <p style="margin-top: -12px;">
+                                    Hover over the videos to see the original video and text prompts.
+                                </p>
+                            </td>
+                            <div class="video-wrapper" style="width: 32%">
+
+                                <video preload="auto" class="hover-video" src="videos/results/bread/source.mp4"
+                                    preload="metadata" autoplay loop muted>
+
+                                </video>
+
+                                <video preload="auto" class="default-video" src="videos/results/bread/pnp.mp4"
+                                    preload="metadata" autoplay controls loop muted>
+
+                                </video>
+                            </div>
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="hover-video" src="videos/results/dog/source.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="default-video" src="videos/results/dog/pnp.mp4"
+                                    preload="metadata" autoplay controls loop muted></video>
+                                <div class="overlay-text">Van Gogh Style</div>
+                            </div>
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="hover-video" src="videos/results/flamingo/source.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="default-video" src="videos/results/flamingo/sd2depth.mp4"
+                                    preload="metadata" autoplay controls loop muted></video>
+                                <div class="overlay-text">Rainbow-colored Origami Flamingo</div>
+                            </div>
+                            <br />
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="hover-video" src="videos/results/swans/source.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="default-video"
+                                    src="videos/results/swans/pnp-oilpainting.mp4" preload="metadata" autoplay controls
+                                    loop muted></video>
+                                <div class="overlay-text">Oil Painting Style</div>
+                            </div>
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="default-video" src="videos/results/bus/pnp-gpu.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="hover-video" src="videos/results/bus/source.mp4"
+                                    preload="metadata" autoplay controls loop muted></video>
+                                <div class="overlay-text">GPU in a Computer</div>
+                            </div>
+
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="default-video" src="videos/results/car-roundabout/pnp.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="hover-video" src="videos/results/car-roundabout/source.mp4"
+                                    preload="metadata" autoplay controls loop muted></video>
+                                <div class="overlay-text">Comic Book, Black and White Pencil Sketch</div>
+                            </div>
+                            <br />
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="default-video"
+                                    src="videos/results/walking/greeksculpture-pnp.mp4" preload="metadata" autoplay loop
+                                    muted> </video>
+                                <video preload="auto" class="hover-video" src="videos/results/walking/source.mp4"
+                                    preload="metadata" autoplay controls loop muted></video>
+                                <div class="overlay-text">White Ancient Greek Sculpture</div>
+                            </div>
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="default-video" src="videos/results/hike/volcano_depth.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="hover-video" src="videos/results/hike/source.mp4"
+                                    preload="metadata" autoplay controls loop muted></video>
+                                <div class="overlay-text">Volcano, Spewing Lava</div>
+                            </div>
+                            <div class="video-wrapper" style="width: 32%">
+                                <video preload="auto" class="hover-video" src="videos/results/breakdance/source.mp4"
+                                    preload="metadata" autoplay loop muted> </video>
+                                <video preload="auto" class="default-video"
+                                    src="videos/results/breakdance/pnp-popart.mp4" preload="metadata" autoplay controls
+                                    loop muted></video>
+                                <div class="overlay-text">Pop Art Style</div>
+                            </div>
+                            <br /> -->
+                            <td colspan="3">
+                                <p style="margin-top: -12px;text-align: center;">
+                                    Left: Input Video; Right: Edit Video.
+                                </p>
+                            </td>
+                            <div class="result-item">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/bread/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/bread/pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="text-align: center;">To <text class="prompt">"Ice Sculpture"</text>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/dog/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    </caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/dog/pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div style="text-align: center;">To <text class="prompt">"Van Gogh Style"</text>
+                                </div>
+                            </div>
+
+                            <div class="result-item">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/flamingo/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/flamingo/sd2depth.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="text-align: center;">To <text class="prompt">"Rainbow-colored Origami
+                                        Flamingo"</text>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/swans/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    </caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/swans/pnp-oilpainting.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div style="text-align: center;">To <text class="prompt">"Oil Painting Style"</text>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/bus/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/bus/pnp-gpu.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="text-align: center;">To <text class="prompt">"GPU in a Computer"</text>
+                                </div>
+                            </div>
+                            <div class="result-item">
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/car-roundabout/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    </caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/car-roundabout/pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div style="text-align: center;">To <text class="prompt">"Comic Book, Black and White
+                                        Pencil Sketch"</text>
+                                </div>
+                            </div>
+
+                            <div class="result-item">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/walking/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/walking/greeksculpture-pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="text-align: center;">To <text class="prompt">"White Ancient Greek
+                                        Sculpture"</text>
+                                </div>
+                            </div>
+                            <div class="result-item" style="float: right;">
+                                <div class="video-wrapper">
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/breakdance/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper">
+                                    </caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/results/breakdance/pnp-popart.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div style="text-align: center;">To <text class="prompt">"Pop Art Style"</text>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- End video preload="auto"grid -->
+
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-3">Comparisons</h2>
+
+                        <div id="results-carousel" class="carousel results-carousel" align="center">
+                            <div class="item item-video1">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Input video</caption>
+                                    <video preload="auto" poster="" id="video11" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/source.mp4" type="video/mp4">
+                                    </video>
+
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                                    <video preload="auto" poster="" id="video12" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/shark/pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Ours+SD2-Depth <a href="#ref-sd">[2]</a></caption>
+                                    <video preload="auto" poster="" id="video13" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/shark/sd2depth.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Text2Video-Zero <a href="#ref-t2v">[3]</a></caption>
+                                    <video preload="auto" poster="" id="video14" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/shark/t2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Tune-a-video <a href="#ref-tav">[4]</a></caption>
+                                    <video preload="auto" poster="" id="video15" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/shark/tav.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>vid2vid-zero <a href="#ref-v2v">[5]</a></caption>
+                                    <video preload="auto" poster="" id="video16" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/shark/v2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Pix2Video <a href="#ref-p2v">[6]</a></caption>
+                                    <video preload="auto" poster="" id="video25" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/gold-fish/shark/p2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                </br>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Shark"</text></div>
+                            </div>
+
+                            <div class="item item-video2">
+
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Input video</caption>
+                                    <video preload="auto" poster="" id="video21" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                                    <video preload="auto" poster="" id="video22" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/snowy/pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Ours+SD2-Depth <a href="#ref-sd">[2]</a></caption>
+                                    <video preload="auto" poster="" id="video23" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/snowy/sd2depth.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Text2Video-Zero <a href="#ref-t2v">[3]</a></caption>
+                                    <video preload="auto" poster="" id="video24" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/snowy/t2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Tune-a-video <a href="#ref-tav">[4]</a></caption>
+                                    <video preload="auto" poster="" id="video25" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/snowy/tav.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>vid2vid-zero <a href="#ref-v2v">[5]</a></caption>
+                                    <video preload="auto" poster="" id="video26" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/snowy/v2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Pix2Video <a href="#ref-p2v">[6]</a></caption>
+                                    <video preload="auto" poster="" id="video27" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/drift-turn/snowy/p2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Snowy Road"</text></div>
+                            </div>
+                            <div class="item item-video3">
+
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Input video</caption>
+                                    <video preload="auto" poster="" id="video31" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                                    <video preload="auto" poster="" id="video32" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/colosseum/pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Ours+SD2-Depth <a href="#ref-sd">[2]</a></caption>
+                                    <video preload="auto" poster="" id="video33" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/colosseum/sd2depth.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Text2Video-Zero <a href="#ref-t2v">[3]</a></caption>
+                                    <video preload="auto" poster="" id="video34" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/colosseum/t2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Tune-a-video <a href="#ref-tav">[4]</a></caption>
+                                    <video preload="auto" poster="" id="video35" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/colosseum/tav.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>vid2vid-zero <a href="#ref-v2v">[5]</a></caption>
+                                    <video preload="auto" poster="" id="video36" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/colosseum/v2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 150px;">
+                                    <caption>Pix2Video <a href="#ref-p2v">[6]</a></caption>
+                                    <video preload="auto" poster="" id="video37" autoplay controls muted loop
+                                        width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/compare/breakdance/colosseum/p2v.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Ancient Colosseum"</text>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="content has-text-justified">
+            <div class="caption-container">
+              <div class="caption" style="width: 140px;text-align:center;" >
+                Input video
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Ours+PnP <a href="#ref-pnp">[1]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Ours+SD2-Depth <a href="#ref-t2v">[2]</a>
+              </div>
+            <div class="caption" style="width: 140px;text-align: center;">
+                Text2Video-Zero <a href="#ref-t2v">[3]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Tune-a-video <a href="#ref-tav">[4]</a>
+              </div>
+   
+              <div class="caption" style="width: 140px;text-align: center;">
+                vid2vid-zero <a href="#ref-v2v">[5]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Pix2Video <a href="#ref-p2v">[6]</a>
+              </div>
+              
+            </div>
+      </div> -->
+                    </div>
+                </div>
+    </section>
+    <!-- video preload="auto"carousel -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-3">Efficiency</h2>
+                        <div class="content has-text-justified">
+
+
+
+                            <div align="center">
+                                <td colspan="3"><img src="pics/efficiency.png" alt="" width="600" /></td>
+                            </div>
+                            <div class="content has-text-justified">
+                                <p>
+                                    Merging multi-frame tokens reduces the temporal redundancy in video frames,
+                                    improving memory and computational efficiency.
+                                    Therefore, compared with
+                                    baseline methods, VidToMe consumes less memory while generating videos fast.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+    <!-- End video preload="auto"carousel -->
+
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-3">Using Different Control</h2>
+
+                        <div id="results-carousel" class="carousel results-carousel" align="center">
+                            <div class="item item-video1">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Input Video</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/ski-follow/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Ours+PnP <a href="#ref-pnp">[1]</a></caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/ski-follow/polar-bear-pnp.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Polar Bear"</text>
+                                </div>
+                            </div>
+                            <div class="item item-video2">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Input Video</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/tea-pour/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Depth</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/tea-pour/depth.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Ours+ControlNet-Depth <a href="#ref-controlnet">[7]</a></caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/tea-pour/depth-vector.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                </br>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Vector Art"</text></div>
+                            </div>
+
+                            <div class="item item-video2">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Input Video</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/tennis/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Softedge</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/tennis/softedge.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Ours+ControlNet-Softedge <a href="#ref-controlnet">[7]</a></caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/tennis/softedge-spiderman.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                </br>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Spiderman"</text></div>
+                            </div>
+
+                            <div class="item item-video2">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Input Video</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/train/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Ours+ControlNet-Tile <a href="#ref-controlnet">[7]</a></caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/controls/train/tile.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                </br>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Minecraft Style"</text></div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- <div class="content has-text-justified">
+            <div class="caption-container">
+              <div class="caption" style="width: 140px;text-align:center;" >
+                Input video
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Ours+PnP <a href="#ref-pnp">[1]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Ours+SD2-Depth <a href="#ref-t2v">[2]</a>
+              </div>
+            <div class="caption" style="width: 140px;text-align: center;">
+                Text2Video-Zero <a href="#ref-t2v">[3]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Tune-a-video <a href="#ref-tav">[4]</a>
+              </div>
+   
+              <div class="caption" style="width: 140px;text-align: center;">
+                vid2vid-zero <a href="#ref-v2v">[5]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Pix2Video <a href="#ref-p2v">[6]</a>
+              </div>
+              
+            </div>
+      </div> -->
+                    </div>
+                </div>
+    </section>
+    <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-3">Using Customized Models</h2>
+
+                        <div id="results-carousel" class="carousel results-carousel" align="center">
+                            <div class="item item-video1">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Input Video</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/customized/breakdance/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Pixel Art LoRA<sup>1</sup> <a href="#ref-lora">[8]</a></caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop width="150px">
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/customized/breakdance/softedge-pixelart-lora.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </div>
+                                <div style="font-size: xx-large;">To <text class="prompt">"Pixel Art Style"</text>
+                                </div>
+                            </div>
+
+                            <div class="item item-video2">
+                                <!-- Add caption element for each video preload="auto"-->
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Input Video</caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/customized/man-surround/source.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-wrapper" style="width: 300px;">
+                                    <caption>Finetuned Model (Anything<sup>2</sup>)
+                                    </caption>
+                                    <video preload="auto" poster="" autoplay controls muted loop>
+                                        <!-- Your video preload="auto"file here -->
+                                        <source src="videos/customized/man-surround/tile.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        </br>
+                        <div class="container">
+                            <div class="columns is-centered">
+                                <div class="column is-8">
+                                    <div class="content" align="left">
+
+                                        <p>
+                                            1. Use LoRA model from <a
+                                                href="https://huggingface.co/artificialguybr/pixelartredmond-1-5v-pixel-art-loras-for-sd-1-5"
+                                                target="_blank" style="color: #3273dc;">artificialguybr</a>.
+                                            </br>
+                                            2. Use customized model <a
+                                                href="https://huggingface.co/stablediffusionapi/anything-v5"
+                                                target="_blank" style="color: #3273dc;">Anything</a>.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="content has-text-justified">
+            <div class="caption-container">
+              <div class="caption" style="width: 140px;text-align:center;" >
+                Input video
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Ours+PnP <a href="#ref-pnp">[1]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Ours+SD2-Depth <a href="#ref-t2v">[2]</a>
+              </div>
+            <div class="caption" style="width: 140px;text-align: center;">
+                Text2Video-Zero <a href="#ref-t2v">[3]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Tune-a-video <a href="#ref-tav">[4]</a>
+              </div>
+   
+              <div class="caption" style="width: 140px;text-align: center;">
+                vid2vid-zero <a href="#ref-v2v">[5]</a>
+              </div>
+              <div class="caption" style="width: 140px;text-align: center;">
+                Pix2Video <a href="#ref-p2v">[6]</a>
+              </div>
+              
+            </div>
+      </div> -->
+                    </div>
+                </div>
+    </section>
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@article{tokenflow2023,
+        title = {TokenFlow: Consistent Diffusion Features for Consistent Video Editing},
+        author = {Geyer, Michal and Bar-Tal, Omer and Bagon, Shai and Dekel, Tali},
+        journal={arXiv preprint arxiv:2307.10373},
+        year={2023}
+        }</code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <!-- <h2 class="title is-3"></h2> -->
+                        <div class="content has-text-justified">
+                            <p>
+                                <a name="ref-pnp" id="ref-pnp"></a>
+                                [1] Narek Tumanyan, Michal Geyer, et al. “Plug-and-play diffusion features for
+                                text-driven image-to-image translation”. In CVPR. 2023.
+                                </br>
+                                <a name="ref-sd" id="ref-sd"></a>
+                                [2] Robin Rombach, Andreas Blattmann, et al. “High-resolution image synthesis with
+                                latent diffusion models”. In CVPR. 2022.
+                                </br>
+                                <a name="ref-t2v" id="ref-t2v"></a>
+                                [3] Levon Khachatryan, Andranik Movsisyan, et al. “Text2video-zero: Text-to-image
+                                diffusion models are zero-shot video generators”. arXiv preprint arXiv:2303.13439. 2023.
+                                </br>
+                                <a name="ref-tav" id="ref-tav"></a>
+                                [4] Jay Zhangjie Wu, Yixiao Ge, et al. “Tune-a-video: One-shot tuning of image diffusion
+                                models for text-to-video generation”. In ICCV, 2023.
+                                </br>
+                                <a name="ref-v2v" id="ref-v2v"></a>
+                                [5] Wen Wang, kangyang Xie, et al. “Zero-shot video editing using off-the-shelf image
+                                diffusion models”. arXiv preprint arXiv:2303.17599. 2023.
+                                </br>
+                                <a name="ref-p2v" id="ref-p2v"></a>
+                                [6] Duygu Ceylan, Chun-Hao P Huang, and Niloy J Mitra. “Pix2video: Video editing using
+                                image diffusion”. In ICCV. 2023.
+                                </br>
+                                <a name="ref-controlnet" id="ref-controlnet"></a>
+                                [7] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. “Adding conditional control to
+                                text-to-image diffusion models”. In ICCV. 2023.
+                                </br>
+                                <a name="ref-lora" id="ref-lora"></a>
+                                [8] Edward J. Hu and Yelong Shen, et al. “LoRA: Low-Rank Adaptation of Large Language
+                                Models”. In ICLR. 2021.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-8">
+                            <div class="content">
+
+                                <p>
+                                    This page was adapted from
+                                    <a href="https://github.com/diffusion-TokenFlow/diffusion-TokenFlow.github.io"
+                                        target="_blank">TokenFlow Project Page
+                                    </a>
+                                    built using the
+                                    <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                        target="_blank">Academic Project Page Template
+                                    </a>.
+                                    You are free to borrow the of this website, we just ask that you link back to this
+                                    page in the footer. <br> This website is licensed under a
+                                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+                                        target="_blank">Creative
+                                        Commons Attribution-ShareAlike 4.0 International License
+                                    </a>.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Statcounter tracking code -->
+
+            <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+            <!-- End of Statcounter Code -->
+            <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                    const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+                    videoWrappers.forEach(wrapper => {
+                        const defaultVideo = wrapper.querySelector('.default-video');
+                        const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+                        const height = wrapper.offsetWidth / aspectRatio;
+
+                        wrapper.style.height = `${height}px`;
+
+                        wrapper.addEventListener('mouseenter', () => {
+                            defaultVideo.pause();
+                            hoverVideo.play();
+                        });
+
+                        wrapper.addEventListener('mouseleave', () => {
+                            defaultVideo.play();
+                            hoverVideo.pause();
+                        });
+                    });
+                });
+                $(document).ready(function () {
+                    var carouselItems = $('.carousel .item');
+                    var numItems = carouselItems.length;
+                    var numVideos = 5;
+                    var currentIndex = 0;
+
+                    $('.carousel').on('click', function () {
+                        currentIndex++;
+                        if (currentIndex + numVideos <= numItems) {
+                            carouselItems.removeClass('active');
+                            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                        } else {
+                            currentIndex = 0;
+                            carouselItems.removeClass('active');
+                            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                        }
+                    });
+
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                });
+            </script>
+</body>
+
+</html>
