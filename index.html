@@ -57,7 +57,7 @@
                         <div class="is-size-5 publication-authors">
                             <!-- Paper authors -->
                             <span class="author-block">
-                                Xirui Li<sup>1</sup>,</span>
+                                <a href="https://github.com/lixirui142" target="_blank">Xirui Li</a><sup>1</sup>,</span>
                             <span class="author-block">
                                 <a href="https://vision.sjtu.edu.cn/" target="_blank">Chao Ma</a><sup>1</sup>,</span>
                             <span class="author-block">
@@ -81,7 +81,7 @@
                             <div class="publication-links">
                                 <!-- Arxiv PDF link -->
                                 <span class="link-block">
-                                    <a href='./TokenFlow_Arxiv.pdf' target="_blank"
+                                    <a href='./VidToMe_Arxiv.pdf' target="_blank"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
@@ -103,12 +103,11 @@
 
                                 <!-- Github link -->
                                 <span class="link-block">
-                                    <a href="https://github.com/omerbt/TokenFlow" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
+                                    <a target="_blank" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
-                                        <span>Code</span>
+                                        <span>Code <span style="color: #f1f51b;">(Coming Soon)</span></span>
                                     </a>
                                 </span>
                                 <!-- Hugging Face Demo link with an image icon -->
@@ -123,8 +122,7 @@
               </span> -->
                                 <!-- ArXiv abstract Link -->
                                 <span class="link-block">
-                                    <a href="https://arxiv.org/abs/2307.10373" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
+                                    <a target="_blank" class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="ai ai-arxiv"></i>
                                         </span>
@@ -146,14 +144,14 @@
             <div class="hero-body">
                 <video preload="auto" poster="" id="tree" autoplay controls muted loop width="600px" outline="0px">
                     <!-- Your video -->
-            <source src="videos/teaser.mp4" type="video/mp4">
-    <!-- <source src="final_very_compressed.mp4" -->
+                    <source src="videos/teaser.mp4" type="video/mp4">
+                    <!-- <source src="final_very_compressed.mp4" -->
 
-    </video>
-    <!-- <h2 class="subtitle has-text-centered"> 
+                </video>
+                <!-- <h2 class="subtitle has-text-centered"> 
       </h2> -->
-    </div>
-    </div>
+            </div>
+        </div>
     </section>
     <!-- End teaser video -->
 
@@ -204,28 +202,29 @@
                             </div>
                             <div class="content has-text-justified">
                                 <p>
-                                    Given an input source video and a text prompt, our proposed VidToMe generate an
-                                    edited video accoding to the prompt using a pretrained text-to-image diffusion
-                                    model. Our idea is to merge similar tokens across multiple frames in self-attention
-                                    modules to achieve temporal consistency in generated videos.
+                                    Given an input source video and a text prompt, our proposed VidToMe generates an
+                                    edited video according to the prompt using a pretrained text-to-image diffusion
+                                    model. The critical idea is to merge similar tokens across multiple frames in
+                                    self-attention modules to achieve temporal consistency in generated videos.
                                 </p>
                                 <p>
-                                    <b>Top: VidToMe pipeline.</b> Starting from DDIM inverted noise latents, we denoise
-                                    the video frames with the diffusion model combining with an existing controlling
-                                    method.
-                                    The video token merging is applied before self-attention blocks.
+                                    <b>Top: VidToMe pipeline.</b> Starting from DDIM inverted noise latent, we denoise
+                                    the video frames with the diffusion model combined with an existing controlling
+                                    method. The video token merging is applied before self-attention blocks.
                                 </p>
                                 <p>
                                     <b>Bottom: Video Token Merging.</b> Given the self-attention input tokens, we first
-                                    merge tokens intra the video chunk (Local Token Merging). Then a set of global
-                                    tokens is further combined to enable inter-chunk token sharing (Global Token
-                                    Merging). After joint self-attention on the merged token set, the output tokens are
-                                    restored to their original size by reversing the merging process.
+                                    merge tokens in the video chunk (Local Token Merging). Then, a global token set is
+                                    combined to enable inter-chunk token sharing (Global Token Merging). After joint
+                                    self-attention on the merged token set, the output tokens are restored to their
+                                    original size by reversing the merging process.
                                 </p>
                             </div>
                         </div>
                     </div>
     </section>
+
+
     <!--End paper poster -->
 
     <!-- Video grid -->
@@ -720,9 +719,8 @@
                             <div class="content has-text-justified">
                                 <p>
                                     Merging multi-frame tokens reduces the temporal redundancy in video frames,
-                                    improving memory and computational efficiency.
-                                    Therefore, compared with
-                                    baseline methods, VidToMe consumes less memory while generating videos fast.
+                                    improving memory and computational efficiency. Therefore, compared with baseline
+                                    methods, VidToMe consumes less memory while generating videos quickly.
                                 </p>
                             </div>
                         </div>
@@ -971,12 +969,7 @@
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
-            <pre><code>@article{tokenflow2023,
-        title = {TokenFlow: Consistent Diffusion Features for Consistent Video Editing},
-        author = {Geyer, Michal and Bar-Tal, Omer and Bagon, Shai and Dekel, Tali},
-        journal={arXiv preprint arxiv:2307.10373},
-        year={2023}
-        }</code></pre>
+            <pre><code></code></pre>
         </div>
     </section>
     <!--End BibTex citation -->
